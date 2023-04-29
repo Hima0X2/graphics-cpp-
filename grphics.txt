@@ -1,0 +1,126 @@
+agge #include<graphics.h> deoa lgbe
+
+initwindow(x axis,y axis,title)--Size of window
+line(x1,y1,x2,y2)--Create a line(https://www.youtube.com/watch?v=AelCyg4PPAo)
+ellipse(int x, int y, int start_angle, int end_angle, int x_radius, int y_radius)--Create a ellipse(https://www.youtube.com/watch?v=SikGiucdAr0)
+circle(x, y, radius)--Create a circle
+rectangle(int left, int top, int right, int bottom)--create a rectangle.
+arc(x-exis,y-exis,starting angle,finishing angle,radius)--
+change background color: {setbkcolor(7);
+	cleardevice();
+                        }
+setcolor(RED)--use color for tringle/rectengle/circle line.
+setcolor has many code numbers:
+    COLOR               INT VALUES
+ -------------------------------
+ BLACK                   0
+ BLUE                    1
+ GREEN                   2
+ CYAN                    3   
+ RED                     4
+ MAGENTA                 5
+ BROWN                   6 
+ LIGHTGRAY               7 
+ DARKGRAY                8
+ LIGHTBLUE               9
+ LIGHTGREEN             10
+ LIGHTCYAN              11
+ LIGHTRED               12
+ LIGHTMAGENTA           13
+ YELLOW                 14
+ WHITE                  15
+
+setfillstyle(int pattern, int color)--use for block style and color(ayta use krte hole void floodfill(int x, int y, int border_color) use krte hbe)
+color same code setcolor() er moto
+ PATTERN              INT VALUES
+ -------------------------------
+ EMPTY_FILL               0
+ SOLID_FILL               1
+ LINE_FILL                2
+ LTSLASH_FILL             3   
+ SLASH_FILL               4
+ BKSLASH_FILL             5
+ LTBKSLASH_FILL           6 
+ HATCH_FILL               7 
+ XHATCH_FILL              8
+ INTERLEAVE_FILL          9
+ WIDE_DOT_FILL           10
+ CLOSE_DOT_FILL          11
+ USER_FILL               12
+floodfill(int x, int y, int border_color)==aykhane x and y oi block er range hbe jdi beshi hoy range taile block er baire color krbe r equal hoile
+                                           block er vitore(kn jani border color white chara onnota kaj kore na!)
+
+settextstyle(int font_style, int direction,int font_size);
+COLOR               INT VALUES
+-------------------------------
+DEFAULT_FONT            0
+TRIPLEX_FONT            1
+SMALL_FONT              2
+SANS_SERIF_FONT         3
+GOTHIC_FONT             4
+SCRIPT_FONT             5
+SIMPLEX_FONT            6 
+TRIPLEX_SCR_FONT        7
+COMPLEX_FONT            8
+EUROPEAN_FONT           9
+BOLD_FONT              10
+
+outtextxy(int x, int y, char *string);x,y=position 
+
+**Declare krar pattern: setfillstyle(int pattern, int color)
+                         circle(x, y, radius)//block name+range 
+                         floodfill(int x, int y, int border_color)
+
+
+For clear device== cleardevice();(in compiler it's system("cls))
+ 
+getmax()=getmaxx returns the maximum (screen-relative) x value for the current graphics driver and mode.
+{outtextxy() function which displays the text or string at a specified point (x, y) on the screen.
+
+Syntax :
+
+void outtextxy(int x, int y, char *string);
+
+where, x, y are coordinates of 
+the point and, third argument contains
+the address of string to be displayed.}
+strftime()=converts the given date and time from a given calendar time time to a null-terminated multibyte character string.
+sscanf() function in C++ is used to read the data from string buffer.
+
+putpixel(int x,int y,color) function which plots a pixel at location (x, y) of specified color.(bivinno jagay color use)
+
+GetSystemMetrics(SM_CXSCREEN)=open a FullScreen;
+GetAsyncKeyState(VK_RIGHT/LEFT/UP/DOWN)=for arrow movement
+GetAsyncKeyState(VK_RETURN)=press enter
+insert image:
+readimagefile(image_file_name,int left,int top,int right,int buttom)=Show this picture in WGI;
+writeimagefile(image file name)=For saving WGI picture;
+
+for mouse click:
+add 	POINT cursor;
+		GetCursorPos(&cursor);
+
+*for making button you have to know those things:
+ismouseclick(int kind);
+WM_MOUSEMOVE
+if you want to detect a mouse movement
+WM_LBUTTONDBLCLK
+...detect when the left mouse button is double clicked
+WM_LBUTTONDOWN
+...detect when the left mouse button is clicked down
+WM_LBUTTONUP
+...detect when the left mouse button is released up
+WM_MBUTTONDBLCLK
+...detect when the middle mouse button is double clicked
+WM_MBUTTONDOWN
+...detect when the middle mouse button is clicked down
+WM_MBUTTONUP
+...detect when the middle mouse button is released up
+WM_RBUTTONDBLCLK
+...detect when the right mouse button is double clicked
+WM_RBUTTONDOWN
+...detect when the right mouse button is clicked down
+WM_RBUTTONUP
+...detect when the right mouse button is released up
+for clearmouseclick(int kind):
+https://home.cs.colorado.edu/~main/bgi/doc/clearmouseclick.html
